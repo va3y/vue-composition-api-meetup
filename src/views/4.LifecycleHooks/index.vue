@@ -1,7 +1,44 @@
 <script setup lang="ts">
-import useOnMounted from '../../composable/useOnMounted'
+import { ref, onMounted } from "vue";
 
-const { state, onClick } = useOnMounted()
+const state = ref("");
+
+// Какие onMounted будет заригестрированы?
+onMounted(() => {
+  state.value += "1 ";
+});
+
+const onClick = () => {
+  onMounted(() => {
+    state.value += "2 ";
+  });
+};
+
+class Foo {
+  constructor() {
+    this.registerOnMounted();
+  }
+
+  registerOnMounted() {
+    onMounted(() => {
+      state.value += "3 ";
+    });
+  }
+}
+new Foo();
+
+(async function () {
+  onMounted(() => {
+    state.value += "4 ";
+  });
+})();
+
+(async function () {
+  await Promise.resolve();
+  onMounted(() => {
+    state.value += "5 ";
+  });
+})();
 </script>
 
 <template>
@@ -9,6 +46,7 @@ const { state, onClick } = useOnMounted()
     Lifecycle hooks
     <br />(Хуки жизненного цикла)
   </h1>
+  <div class="text-xl">Какие onMounted будет заригестрированы?</div>
   <img class="block h-screen" src="@/assets/lifecycle-hooks.png" />
   <div class="mt-20 text-3xl">
     state:

@@ -1,10 +1,23 @@
-<!-- Стиль script setup -->
-<script setup lang="ts">
+<script lang="ts">
+import { defineComponent } from "vue";
+
 import useFeatureA from "./featureA";
 import useFeatureB from "./featureB";
 
-const { refA, computedA } = useFeatureA();
-const { refB, computedB } = useFeatureB();
+// Стиль Composition API. Организуем логику по фичам
+export default defineComponent({
+  setup() {
+    const { refA, computedA } = useFeatureA();
+    const { refB, computedB } = useFeatureB();
+
+    return {
+      refA,
+      refB,
+      computedA,
+      computedB,
+    };
+  },
+});
 </script>
 
 <template>
