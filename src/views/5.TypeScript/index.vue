@@ -44,16 +44,17 @@ defineEmits<{ (foo: "foo"): string }>();
   <div class="max-w-prose text-xl">
     <h1>TypeScript</h1>
     <h2 class="mt-16">defineProps()</h2>
-    <img src="@/assets/define-props.png" alt="" />
-
+    <img src="@/assets/define-props.png" />
+    <h2 class="mt-16">Типизация return</h2>
     <div class="mt-16">
       Не обязательно типизировать return в composable функциях. Это пустая трата
       времени, так как return в 99% случаев может быть имплицитно типизорован
-      нами самими, когда мы пишем composable функцию. <br /><br />Если eslint
+      нами самими, когда мы пишем composable функцию.
+      <br />
+      <br />Если eslint
       ругуется, можно поставить
       <code>'@typescript-eslint/explicit-module-boundary-types': 'error',</code>
       в .eslintrc
-
       <img class="my-8" src="@/assets/no-return-type.png" />
     </div>
 
@@ -63,20 +64,14 @@ defineEmits<{ (foo: "foo"): string }>();
       использования во Vue 3. Я бы его использовал c Vue 3 точно, для Vue 2
       старый Vetur более оптимален на мой взгляд.
       <br />
+      <br />Его главная фича:
+      <strong>типизиация эмитов и пропов в template из коробки.</strong>
       <br />
-      Его главная фича:
-      <strong>
-        C ним можно проерять типизиацию эмитов и пропов напрямую в
-        template</strong
-      >
-      <br />
-      <br />
-      Полезная ссылка:
+      <br />Полезная ссылка:
       <a
         class="underline text-green-500"
         href="https://github.com/johnsoncodehk/volar/tree/master/extensions/vscode-vue-language-features#:~:text=Define%20Global%20Components"
-        >Как можно зарегистрировать глобальные компоненты в Volar</a
-      >
+      >Как можно зарегистрировать глобальные компоненты в Volar</a>
     </div>
   </div>
 </template>

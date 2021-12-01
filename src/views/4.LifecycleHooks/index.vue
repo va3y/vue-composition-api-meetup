@@ -3,7 +3,7 @@ import { ref, onMounted } from "vue";
 
 const state = ref("");
 
-// Какие onMounted будет заригестрированы?
+// Какие onMounted будет зарегистрированы?
 onMounted(() => {
   state.value += "1 ";
 });
@@ -46,7 +46,7 @@ new Foo();
     Lifecycle hooks
     <br />(Хуки жизненного цикла)
   </h1>
-  <div class="text-xl">Какие onMounted будет заригестрированы?</div>
+  <div class="text-xl">Какие onMounted будет зарегистрированы?</div>
   <img class="block h-screen" src="@/assets/lifecycle-hooks.png" />
   <div class="mt-20 text-3xl">
     state:

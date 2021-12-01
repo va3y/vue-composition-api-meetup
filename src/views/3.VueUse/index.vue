@@ -62,9 +62,7 @@ const localStorageData = useStorage("foo", undefined);
   </ul>
   <div class="text-xl font-semibold mb-4">Особенно полезные функции:</div>
   <ul class="list-disc text-xl mb-20 max-w-xl space-y-3">
-    <li>
-      useAsyncState отлично решают предыдущую проблему асинхронного сетапа.
-    </li>
+    <li>useAsyncState отлично решает предыдущую проблему асинхронного сетапа.</li>
     <li>
       Очень удобно использовать session и local storage. Не крашится от
       <code>JSON.parse('undefined')</code>😂
@@ -81,16 +79,7 @@ const localStorageData = useStorage("foo", undefined);
   <div
     ref="draggable"
     :style="style"
-    class="
-      fixed
-      cursor-pointer
-      bg-gray-100
-      p-2
-      rounded-xl
-      w-60
-      h-28
-      select-none
-    "
+    class="fixed cursor-pointer bg-gray-100 p-2 rounded-xl w-60 h-28 select-none"
   >
     useDraggable. Координаты:
     <br />
