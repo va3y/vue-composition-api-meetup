@@ -8,7 +8,7 @@ interface CustomPropType {
 
 // Перегрузки define props:
 
-// Наподобии props в Options API
+// Наподобие props в Options API
 defineProps({
   foo: {
     type: Object as PropType<CustomPropType>,
@@ -51,8 +51,7 @@ defineEmits<{ (foo: "foo"): string }>();
       времени, так как return в 99% случаев может быть имплицитно типизорован
       нами самими, когда мы пишем composable функцию.
       <br />
-      <br />Если eslint
-      ругуется, можно поставить
+      <br />Если eslint ругуется, можно поставить
       <code>'@typescript-eslint/explicit-module-boundary-types': 'error',</code>
       в .eslintrc
       <img class="my-8" src="@/assets/no-return-type.png" />
@@ -71,7 +70,8 @@ defineEmits<{ (foo: "foo"): string }>();
       <a
         class="underline text-green-500"
         href="https://github.com/johnsoncodehk/volar/tree/master/extensions/vscode-vue-language-features#:~:text=Define%20Global%20Components"
-      >Как можно зарегистрировать глобальные компоненты в Volar</a>
+        >Как можно зарегистрировать глобальные компоненты в Volar</a
+      >
     </div>
   </div>
 </template>
